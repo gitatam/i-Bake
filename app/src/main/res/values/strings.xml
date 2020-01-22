@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">iBake</string>
-    <string name="search">Search...</string>
+    <string name="search">Search…</string>
     <string name="shopping_cart">Cart</string>
+    <string name="baking_category_image_description">a baking category image</string>
+    <string name="category_name">Fruit Pie</string>
 </resources>
