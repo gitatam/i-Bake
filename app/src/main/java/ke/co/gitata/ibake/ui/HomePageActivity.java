@@ -6,21 +6,30 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ke.co.gitata.ibake.R;
+import ke.co.gitata.ibake.model.RecipeEntity;
+import ke.co.gitata.ibake.utilities.SampleData;
 
 public class HomePageActivity extends AppCompatActivity {
     @BindView(R.id.my_recycler_view)
     RecyclerView mRecyclerView;
 
+    private List<RecipeEntity> recipeData = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
 
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
@@ -29,6 +38,12 @@ public class HomePageActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         initRecyclerView();
+
+        recipeData.addAll(SampleData.getRecipes());
+        for (RecipeEntity recipe : recipeData) {
+            Log.i("iBake", recipe.toString());
+        }
+
     }
 
     @Override

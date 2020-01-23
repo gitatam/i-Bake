@@ -1,6 +1,6 @@
 package ke.co.gitata.ibake.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class RecipeEntity {
     private int id;
@@ -9,13 +9,26 @@ public class RecipeEntity {
     private int time;
     private double calories;
     private String difficulty;
-    private ArrayList<String> ingredients;
-    private ArrayList<String> nutrition;
+    private List<String> ingredients;
+    private List<String> instructions;
+    private List<String> nutrition;
 
     public RecipeEntity() {
+
     }
 
-    public RecipeEntity(int id, String name, String description, int time, double calories, String difficulty, ArrayList<String> ingredients, ArrayList<String> nutrition) {
+    public RecipeEntity(String name, String description, int time, double calories, String difficulty, List<String> ingredients, List<String> instructions, List<String> nutrition) {
+        this.name = name;
+        this.description = description;
+        this.time = time;
+        this.calories = calories;
+        this.difficulty = difficulty;
+        this.ingredients = ingredients;
+        this.instructions = instructions;
+        this.nutrition = nutrition;
+    }
+
+    public RecipeEntity(int id, String name, String description, int time, double calories, String difficulty, List<String> ingredients, List<String> instructions, List<String> nutrition) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -23,16 +36,7 @@ public class RecipeEntity {
         this.calories = calories;
         this.difficulty = difficulty;
         this.ingredients = ingredients;
-        this.nutrition = nutrition;
-    }
-
-    public RecipeEntity(String name, String description, int time, double calories, String difficulty, ArrayList<String> ingredients, ArrayList<String> nutrition) {
-        this.name = name;
-        this.description = description;
-        this.time = time;
-        this.calories = calories;
-        this.difficulty = difficulty;
-        this.ingredients = ingredients;
+        this.instructions = instructions;
         this.nutrition = nutrition;
     }
 
@@ -84,19 +88,27 @@ public class RecipeEntity {
         this.difficulty = difficulty;
     }
 
-    public ArrayList<String> getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(ArrayList<String> ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
 
-    public ArrayList<String> getNutrition() {
+    public List<String> getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(List<String> instructions) {
+        this.instructions = instructions;
+    }
+
+    public List<String> getNutrition() {
         return nutrition;
     }
 
-    public void setNutrition(ArrayList<String> nutrition) {
+    public void setNutrition(List<String> nutrition) {
         this.nutrition = nutrition;
     }
 
@@ -110,6 +122,7 @@ public class RecipeEntity {
                 ", calories=" + calories +
                 ", difficulty='" + difficulty + '\'' +
                 ", ingredients=" + ingredients +
+                ", instructions=" + instructions +
                 ", nutrition=" + nutrition +
                 '}';
     }
