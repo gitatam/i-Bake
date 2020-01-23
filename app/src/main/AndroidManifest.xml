@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".ui.HomePageActivity"
+            android:name=".MainActivity"
             android:label=""
             android:theme="@style/AppTheme.AllWhite">
             <intent-filter>

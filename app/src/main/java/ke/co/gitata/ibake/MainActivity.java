@@ -1,4 +1,4 @@
-package ke.co.gitata.ibake.ui;
+package ke.co.gitata.ibake;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,20 +15,21 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import ke.co.gitata.ibake.R;
 import ke.co.gitata.ibake.model.RecipeEntity;
+import ke.co.gitata.ibake.ui.RecipesAdapter;
 import ke.co.gitata.ibake.utilities.SampleData;
 
-public class HomePageActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     @BindView(R.id.my_recycler_view)
     RecyclerView mRecyclerView;
 
     private List<RecipeEntity> recipeData = new ArrayList<>();
+    private RecipesAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_main);
 
 
         ActionBar actionBar = getSupportActionBar();
@@ -57,5 +58,8 @@ public class HomePageActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
+        mAdapter = new RecipesAdapter(recipeData, this);
+        mRecyclerView.setAdapter(mAdapter);
+
     }
 }
