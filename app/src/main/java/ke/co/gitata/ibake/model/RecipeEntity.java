@@ -1,8 +1,15 @@
 package ke.co.gitata.ibake.model;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.util.List;
 
+@Entity(tableName = "recipes")
 public class RecipeEntity {
+    @PrimaryKey(autoGenerate = true)
+
     private int id;
     private String name;
     private String description;
@@ -13,10 +20,12 @@ public class RecipeEntity {
     private List<String> instructions;
     private List<String> nutrition;
 
+    @Ignore
     public RecipeEntity() {
 
     }
 
+    @Ignore
     public RecipeEntity(String name, String description, int time, double calories, String difficulty, List<String> ingredients, List<String> instructions, List<String> nutrition) {
         this.name = name;
         this.description = description;
@@ -27,6 +36,7 @@ public class RecipeEntity {
         this.instructions = instructions;
         this.nutrition = nutrition;
     }
+
 
     public RecipeEntity(int id, String name, String description, int time, double calories, String difficulty, List<String> ingredients, List<String> instructions, List<String> nutrition) {
         this.id = id;
