@@ -12,9 +12,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".HomePageActivity"
+            android:name=".RecipeDetailsActivity"
+            android:label="@string/title_activity_recipe_details"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ke.co.gitata.ibake.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
             android:label=""
-            android:theme="@style/AppTheme.AllWhite">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
