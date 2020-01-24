@@ -13,7 +13,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ke.co.gitata.ibake.R;
-import ke.co.gitata.ibake.model.RecipeEntity;
+import ke.co.gitata.ibake.database.RecipeEntity;
 
 public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.ViewHolder> {
     private final List<RecipeEntity> mRecipes;

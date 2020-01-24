@@ -3,7 +3,7 @@ package ke.co.gitata.ibake.utilities;
 import java.util.ArrayList;
 import java.util.List;
 
-import ke.co.gitata.ibake.model.RecipeEntity;
+import ke.co.gitata.ibake.database.RecipeEntity;
 
 public class SampleData {
     public static List<RecipeEntity> getRecipes() {

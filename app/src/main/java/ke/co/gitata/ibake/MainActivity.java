@@ -17,7 +17,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import ke.co.gitata.ibake.model.RecipeEntity;
+import ke.co.gitata.ibake.database.RecipeEntity;
 import ke.co.gitata.ibake.ui.RecipesAdapter;
 import ke.co.gitata.ibake.utilities.SampleData;
 

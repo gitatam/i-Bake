@@ -1,4 +1,4 @@
-package ke.co.gitata.ibake.model;
+package ke.co.gitata.ibake.database;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;
