@@ -10,7 +10,6 @@ public class SampleData {
         List<RecipeEntity> recipes = new ArrayList<>();
 
         RecipeEntity recipe1 = new RecipeEntity();
-        recipe1.setId(1);
         recipe1.setName("Fruit Pie");
         recipe1.setDescription("Combine two classic sweets – poached pears and a fruit pie - to make this stunning dessert with a decorative top to impress your dinner guests");
         recipe1.setTime(60);
