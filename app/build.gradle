@@ -43,4 +43,5 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:2.2.3"
     //Live Data Dependency
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation 'com.google.code.gson:gson:2.8.6'
 }
