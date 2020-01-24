@@ -9,7 +9,6 @@ import java.util.List;
 @Entity(tableName = "recipes")
 public class RecipeEntity {
     @PrimaryKey(autoGenerate = true)
-
     private int id;
     private String name;
     private String description;
