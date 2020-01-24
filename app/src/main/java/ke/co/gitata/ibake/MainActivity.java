@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import ke.co.gitata.ibake.model.RecipeEntity;
 import ke.co.gitata.ibake.ui.RecipesAdapter;
 import ke.co.gitata.ibake.utilities.SampleData;
@@ -22,6 +24,11 @@ import ke.co.gitata.ibake.utilities.SampleData;
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.my_recycler_view)
     RecyclerView mRecyclerView;
+    @OnClick(R.id.tv_display_name)
+    void onDispNameClickHandler() {
+        Intent intent = new Intent(this, RecipeDetailsActivity.class);
+        startActivity(intent);
+    }
 
     private List<RecipeEntity> recipeData = new ArrayList<>();
     private RecipesAdapter mAdapter;
